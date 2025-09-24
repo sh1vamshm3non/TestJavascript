@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+    <header>
+       <nav> 
+       <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Skills</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">Contacts</a></li>
+       </ul>
+       </nav>
+    </header>
+    <section>
+        <h1>Welcome to My Portfolio </h1>
+        <h1 id="Hero"></h1>
+        <p>1st Year B.Tech Student | Learning with Fun </p>
+    </section>
+    <section>
+        <h2>About Me</h2>
+        <p>Hi! I’m a B.Tech student, still learning, still exploring. I love coding , gaming , and tea. My portfolio is my playground, hope you enjoy it!</p>
+        <img src="image.jpg" alt="My Photo" width="200">
+    </section>
+    <section>
+        <h2>Projects</h2>
+        <h3> Squad Site</h3>
+        <p>A fun squad intro site for my friends . Built with HTML & CSS.</p>
+        <h3>Rock Paper Scissors</h3>
+        <p>A JavaScript game to play with friends . Built with HTML, CSS, JS.</p>
+        <h3>Mini Website</h3>
+        <p>My very first mini website . Built with HTML, CSS & a little bit of JavaScript.</p>
+    </section>
+    <section>
+        <h2>Contact Me</h2>
+        <form>
+            <label for="name"></label><br>
+            <input type="text" id="name" name="name" required placeholder="Enter your Name"><br>
+            <label for="email"></label><br>
+            <input type="email" id="email" name="email" required placeholder="Enter you Email"><br>
+            <label for="message"></label><br>
+            <textarea id="message" name="message" rows="4" required placeholder="Type your Message..."></textarea><br>
+            <input type="submit" value="Send">
+        </form>
+    </section>
+    <footer>
+        <p>&copy;2025 Shivamsh Menon | Learning, Coding & Having Fun in B.Tech </p>
+    </footer>
+</body>
+</html>
+const heroText = document.getElementById("hero-text");
+ if (heroText) {
+   const text = "Welcome to My Portfolio ";
+   let i = 0;
+
+   function typeWriter() {
+     if (i < text.length) {
+       heroText.textContent += text.charAt(i);
+       i++;
+       setTimeout(typeWriter, 100);
+    }
+   }
+  typeWriter();  
+ }
